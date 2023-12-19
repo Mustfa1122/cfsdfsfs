@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #c4ad9d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #calculator {
+      background-color: #e9e6dd;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(100, 94, 94, 0.1);
+      overflow: hidden;
+      width: 300px;
+     padding: 2px;
+    }
+
+    #result {
+      font-size: 2em;
+      padding: 10px;
+      text-align: right;
+      border-bottom: 2px solid #ccc;
+    }
+
+    #buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    button {
+      border: none;
+      outline: none;
+      font-size: 1.5em;
+      background-color: #000000;
+      color: #f57251;
+      padding: 15px;
+      cursor: pointer;
+      /* transition: background-color 0.3s; */
+      width: 100%;
+      border: 1px solid #c4ad9d;
+    }
+    .hk:hover:hover{
+        border: 1px solid #f57251;
+        /* border-radius: 20px; */
+    }
+
+    button.operator {
+      background-color: #f57251;
+      color: #000000;
+    }
+
+    button.double {
+      grid-column: span 2;
+    }
+
+    button.clear {
+      background-color: #f57251;
+      color: #fff;
+    }
+
+    button.equals {
+      background-color: #3cb371;
+      color: #fff;
+      grid-column: span 2;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="calculator">
+  <div id="result"></div>
+  <div id="buttons">
+  
+    <button class="operator" onclick="appendToResult('/');">/</button>
+    <button class="operator" onclick="appendToResult('*');">*</button>
+    <button class="operator" onclick="appendToResult('-');">-</button>
+    <button class="operator" onclick="appendToResult('+');">+</button>
+    <!-- <button class="operator"></button> -->
+  
+
+    <button class="hk" onclick="appendToResult('7');">7</button>
+    <button class="hk" onclick="appendToResult('8');">8</button>
+    <button class="hk" onclick="appendToResult('9');">9</button>
+    <button class="hk" onclick="appendToResult('00');">00</button>
+    <button class="hk" onclick="appendToResult('4');">4</button>
+
+   
+    
+
+    <button class="hk" onclick="appendToResult('5');">5</button>
+    <button class="hk" onclick="appendToResult('6');">6</button>
+    <button class="hk" onclick="appendToResult('0');">0</button>
+    <button class="hk" onclick="appendToResult('1');">1</button>
+   
+    <!-- <button class="double" onclick="appendToResult('00');">00</button> -->
+    
+   
+
+    <button class="hk" onclick="appendToResult('2');">2</button>
+    <button class="hk" onclick="appendToResult('3');">3</button>
+    <button class="hk" onclick="appendToResult('.');">.</button>
+    
+    <button class="operator double" onclick="calculateResult();">=</button>
+    <button class="operator double" onclick="clearResult();">C</button>
+    
+    <button class="operator double" onclick="appendToResult('%');">%</button>
+    
+    
+  </div>
+</div>
+
+<script>
+  function appendToResult(value) {
+    document.getElementById('result').textContent += value;
+  }
+
+  function clearResult() {
+    document.getElementById('result').textContent = '';
+  }
+
+  function calculateResult() {
+    try {
+      document.getElementById('result').textContent = eval(document.getElementById('result').textContent);
+    } catch (error) {
+      document.getElementById('result').textContent = 'Error';
+    }
+  }
+</script>
+<script>
+  function appendToResult(value) {
+    document.getElementById('result').textContent += value;
+  }
+  function clear() {
+    document.getElementById('result').textContent = '';
+  }
+  function 
+</script>
+
+
+</script>
+
+</body>
+</html>

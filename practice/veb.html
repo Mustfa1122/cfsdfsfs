@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Program</title>
+    <style>
+        h1 {
+            margin: 30px;
+            color: #ffdbdc;
+            text-shadow: 2px 2px #edeae5;
+
+        }
+
+        body {
+            /* background-color: #55cbcd; */
+            margin-left: 100px;
+        }
+
+        input {
+            background-color: #edeae5;
+            margin: 10px;
+        }
+
+        label {
+            margin-left: 30px;
+        }
+
+        button {
+            margin-left: 200px;
+            background-color: #a3e1dc;
+            border-radius: 50px;
+            padding: 10px;
+        }
+        .border{
+            border-radius: 50px;
+            border: 5px solid #ffdbdc;
+            width: 300px;
+            margin: 50px;
+            padding: 50px;
+            background-color: #55cbcd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="border">
+        <h1>AdditionProgram</h1>
+        <label for="num1">number1</label>
+        <input type="text" id="num1" placeholder="Enter a number"><br>
+        <label for="num2">number2</label>
+        <input type="text" id="num2" placeholder="Enter a number"><br>
+        <button onclick="addNumbers()">Add Num..</button><br>
+        <div id="result"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        function addNumbers() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            // Check if the input is valid
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("enter avoid number")
+            }
+            //perform addnumbers
+            var result = num1 + num2;
+            //display result in the browser 
+            document.getElementById("result").innerHTML = "Result" + result;
+
+        }
+    </script>
+</body>
+
+</html>
